@@ -42,7 +42,7 @@ Matrix quick_pow(int c)
 {
     Matrix result, tmp;
     tmp.s[0][0] = 1; tmp.s[0][1] = 1; tmp.s[1][0] = 1; tmp.s[1][1] = 0;
-    result.s[0][0] = 1; result.s[0][1] = 1; result.s[1][0] = 1; result.s[1][1] = 1;
+    result.s[0][0] = 1; result.s[0][1] = 0; result.s[1][0] = 0; result.s[1][1] = 1;
     while(c)
     {
        if(c & 0x1) result = result * tmp;
@@ -63,7 +63,7 @@ int main()
        else
        {
            Matrix cc = quick_pow(n-2);
-           printf("%d\n", cc.s[0][0]);
+           printf("%d\n", cc.s[0][0]+cc.s[1][0]);
        }
     }
 }
