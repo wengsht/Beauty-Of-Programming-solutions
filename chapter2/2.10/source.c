@@ -70,7 +70,7 @@ Pair solution1(int *arr, int n)
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  solution2
- *  Description:  二分 ln(n)*2
+ *  Description:  二分 
  * =====================================================================================
  */
 Pair solution2(int *arr, int n)
@@ -128,6 +128,6 @@ int main (int argc, char *argv[])
     printf("[solution1] max: %d, min: %d\n", ant.maxi, ant.mini);
 
     ant = solution2(test, n);
-    printf("[solution1] max: %d, min: %d\n", ant.maxi, ant.mini);
+    printf("[solution2] max: %d, min: %d\n", ant.maxi, ant.mini);
     return 0;
 }
