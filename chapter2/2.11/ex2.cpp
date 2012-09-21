@@ -85,7 +85,6 @@ int convex(Point *points, int n, Point *res)
     }
     return top;
 }
-
 double det(double x1, double y1, double x2, double y2)
 {
     return x1*y2 - x2*y1;
@@ -164,7 +163,7 @@ int main (int argc, char *argv[])
     ed = clock();
     t = (ed-st)/(double)CLOCKS_PER_SEC * 1000.0;
 
-    printf("分治解法：最远距离: %lf time:%lfms\n", res, t);
+    printf("凸包旋转卡壳解法：最远距离: %lf time:%lfms\n", res, t);
 
     return 0;
 }
