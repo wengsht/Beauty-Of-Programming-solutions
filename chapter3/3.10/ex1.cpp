@@ -5,7 +5,7 @@
  *
  *    Description:  分层遍历二叉树
  *                  宽搜
- *                  上下左右位置颠倒
+ *                  上下位置颠倒
  *
  *        Version:  1.0
  *        Created:  2012/10/14 16时30分55秒
@@ -118,15 +118,15 @@ void go()
         tmp = q.front();
         q.pop();
         
-        if(tmp->left != NULL && ++each[now+1])
-        {
-            q.push(tmp->left);
-            q2.push(tmp->left->data);
-        }
         if(tmp->right != NULL && ++each[now+1])
         {
             q.push(tmp->right);
             q2.push(tmp->right->data);
+        }
+        if(tmp->left != NULL && ++each[now+1])
+        {
+            q.push(tmp->left);
+            q2.push(tmp->left->data);
         }
 
         count++;
